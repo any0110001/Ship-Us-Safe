@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- The drawer is always open in large screens. The header is always shown,
+      even in small screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+                mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Create a Ship</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp">
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Create a Ship</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="mainPage.html">Main page</a>
+          <a class="mdl-navigation__link" href="createShip.html">Create a ship</a>
+          <a class="mdl-navigation__link" href="viewShips.html">View all ships</a>
+          <a class="mdl-navigation__link" href="createPort.html">Create a port</a>
+          <a class="mdl-navigation__link" href="viewPorts.html">View all ports</a>
+          <a class="mdl-navigation__link" href="addRoute.html">Create a route</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+          <!-- Textfield -->
+
+         <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="name">
+            <label class="mdl-textfield__label" for="name">Name of ship</label>
+          </div>
+         </form>
+            <!-- Numeric Textfield -->
+         <form action="#">
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="speed" onchange="checkValid()">
+             <label class="mdl-textfield__label" for="speed">Maximum speed(knots)</label>
+             <span class="mdl-textfield__error">Input is not valid!</span>
+           </div>
+         </form>
+         <form action="#">
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="range" onchange="checkValid()">
+             <label class="mdl-textfield__label" for="range">Travel range</label>
+             <span class="mdl-textfield__error">Input is not valid!</span>
+           </div>
+         </form>
+         <form action="#">
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="cost" onchange="checkValid()">
+             <label class="mdl-textfield__label" for="cost">Cost per km</label>
+             <span class="mdl-textfield__error">Input is not valid!</span>
+           </div>
+         </form>
+          <!-- Textfield -->
+
+         <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="description">
+            <label class="mdl-textfield__label" for="description">Description</label>
+          </div>
+         </form>
+            
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick = 'createShip()' id='create'>
+        Create a ship
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick = 'modifyShip()' id='modify' disabled>
+        Modify the ship
+        </button>
+
+
+       </div>
+      </main>
+    </div>
+      <script src='js/shared.js'></script>
+      <script src='js/createShip.js'></script>
+      
+  </body>
+</html>

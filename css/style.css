@@ -1,0 +1,15 @@
+.button{
+    padding: .05em;
+    margin: 1em;
+    height: 4em;
+    width: 7em;
+    background-color: rgb(249,15,85) ;
+}
+#selectShip{
+                padding: .05em;
+                height: 2em;
+                width: 12em;
+}
+.full-width{
+    width: 100%;
+}

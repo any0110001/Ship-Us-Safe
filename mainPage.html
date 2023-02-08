@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link href='css/style.css'>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <style>
+      .full-width{
+            width: 100%;
+          }
+      </style>
+  </head>
+  <body onload='getInfo()'>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Ship Us Safe</span>
+        </div>
+      </header>
+        <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout">
+            <a class="mdl-navigation__link" href='' onclick="onGoing()">Ongoing trips</a>
+            <a class="mdl-navigation__link" href='' onclick="upComing()">Upcoming trips</a>
+            <a class="mdl-navigation__link" href='' onclick="past()">Past trips</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Ship Us Safe</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="mainPage.html">Main page</a>
+          <a class="mdl-navigation__link" href="createShip.html">Create a ship</a>
+          <a class="mdl-navigation__link" href="viewShips.html">View all ships</a>
+          <a class="mdl-navigation__link" href="createPort.html">Create a port</a>
+          <a class="mdl-navigation__link" href="viewPorts.html">View all ports</a>
+          <a class="mdl-navigation__link" href="addRoute.html">Create a route</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+            <table class="full-width mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+              <tbody id = "table">
+              </tbody>
+            </table>
+        </div>
+      </main>
+    </div>
+      <script src="js/shared.js"></script>      
+      <script src="js/mainPage.js"></script>
+  </body>
+</html>
